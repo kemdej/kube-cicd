@@ -7,7 +7,7 @@ pipeline {
     }
 */
     environment {
-        registry = gtiglobal/vproapp
+        registry = 'gtiglobal/vproapp'
         registryCredential = 'dockerhub'
      }
 
