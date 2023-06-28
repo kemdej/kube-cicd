@@ -7,7 +7,7 @@ pipeline {
     }
 */
     environment {
-        registr = gtiglobal/vproapp
+        registry = gtiglobal/vproapp
         registryCredential = 'dockerhub'
      }
 
@@ -96,7 +96,7 @@ pipeline {
             }
         }
         Stage('Kubernetes Deploy') {
-            agent { lable 'KOPS'}
+            agent { labels 'KOPS'}
               steps {
                 sh "helm upgrade --install --force vprofile-stack helm/vprofilecharts --set appimage=${registry}:V${BUILD_NUMBER} --namespace prod"
               }
