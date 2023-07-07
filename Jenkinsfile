@@ -7,7 +7,7 @@ pipeline {
     }
 */
     environment {
-        registry = 'gtiglobal/vproapp'
+        registry = 'kemdej/vproapp'
         registryCredential = 'dockerhub'
      }
 
@@ -47,7 +47,7 @@ pipeline {
                 }
             }
         }
-/*
+
         stage('CODE ANALYSIS with SONARQUBE') {
 
             environment {
@@ -71,7 +71,7 @@ pipeline {
                 }
             }
         }
-*/
+
         stage('Build App Image') {
            steps {
             script {
